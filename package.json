@@ -1,0 +1,25 @@
+{
+  "name": "tai-spider-doc",
+  "version": "1.0.0",
+  "description": "Document for tai-spider",
+  "main": "index.js",
+  "scripts": {
+    "ginit": "gitbook init",
+    "gversion": "gitbook -V",
+    "serve": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "repository": "git+https://github.com/wx-rdc/tai-spider-doc.git",
+  "keywords": [
+    "tai-spider"
+  ],
+  "author": "EdwardZhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wx-rdc/tai-spider-doc/issues"
+  },
+  "homepage": "https://github.com/wx-rdc/tai-spider-doc#readme",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
