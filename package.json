@@ -6,7 +6,7 @@
   "scripts": {
     "ginit": "gitbook init",
     "gversion": "gitbook -V",
-    "serve": "gitbook serve",
+    "serve": "gitbook serve --lrport 35288 --port 4001",
     "build": "gitbook build"
   },
   "repository": "git+https://github.com/wx-rdc/tai-spider-doc.git",

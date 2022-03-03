@@ -1,0 +1,42 @@
+{
+    "title": "Tai Spider Reference",
+    "author": "Edward Zhu (zhuhy163@163.com)",
+    "description": "TaiSpider In Action",
+    "language": "en",
+    "gitbook": "3.2.3",
+    "output.name": "site",
+    "plugins": [
+        "-lunr",
+        "-search",
+        "-sharing",
+        "-fontsettings",
+        "back-to-top-button",
+        "copy-code-button",
+        "cuav-chapters",
+        "heading-anchors",
+        "search-pro",
+        "theme-fexa"
+    ],
+    "variables": {
+        "themeFexa": {
+            "nav": [
+                {
+                    "url": "http://...",
+                    "target": "_blank",
+                    "name": "简易教程"
+                }
+            ]
+        }
+    },
+    "pluginsConfig": {
+        "insert-logo": {
+            "url": "/en/logo/tai-spider.jpg",
+            "style": "background: none; max-height: 30px; min-height: 30px"
+        },
+        "theme-fexa": {
+            "search-placeholder": "输入关键字搜索",
+            "logo": "./logo.jpg",
+            "favicon": "./favicon.ico"
+        }
+    }
+}
