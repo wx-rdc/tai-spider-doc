@@ -11,8 +11,9 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'npm --version'
-                sh 'npm install'
-                sh 'npm run build'
+                sh 'npm install -g gitbook-cli'
+                sh 'gitbook install'
+                sh 'gitbook build'
             }
         }
         stage('Deliver') {
