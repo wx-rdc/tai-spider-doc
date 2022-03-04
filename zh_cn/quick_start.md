@@ -1,22 +1,15 @@
-# Quick Start
+# 快速上手
 
-## Table of Content
-  - [Our first Spider](#our-first-spider)
-  - [How to run our spider](#how-to-run-our-spider)
-  - [Follow links in page](#follow-links-in-page)
-  - [Item loader for model](#item-loader-for-model)
-  - [Download images and other files](#download-images-and-other-files)
-  - [Use splash to snapshot page](#use-splash-to-snapshot-page)
+### 第一个爬虫
 
-### Our first spider 
-Spiders are classes that you define and use to scrape information from a website (or a group of websites). They must subclass `TaiSpider` and define the initial requests to make, optionally how to follow links in the pages, and how to parse the downloaded page content to extract data.
+从开发角度来看，爬虫就是用于从网站（或一组网站）中获取信息的类。它必须是`TaiSpider`的子类，并可以根据需要定义要发出的初始请求，可以选择如何跟踪页面中的链接，以及如何解析下载的页面内容以提取数据。
 
-This is the code for our first Spider. A file named `quotes.js` under the `spider` directory in example project:
+这是我们第一个爬虫的代码。一个名为 `quotes` 的爬虫，用于爬取 `quotes.toscrape.com` 网站中一个特定的页面，并将页面中的内容解析出来，然后打印输出到屏幕上。
 
 ```javascript
 'use strict'
 
-const { TaiSpider, ItemLoader } = require('tai-spider');
+const { TaiSpider } = require('tai-spider');
 
 class QuotesSpider extends TaiSpider {
 
@@ -42,17 +35,16 @@ class QuotesSpider extends TaiSpider {
 module.exports = QuotesSpider;
 ```
 
-As you can see, our Spider subclasses `TaiSpider` and defines some attributes and methods:
+正如您所见，爬虫类 `QuoteSpider` 继承了 `TaiSpider` 类，并定义了一些属性和方法： 
 
-   - name: identifies the Spider. It must be unique within a project, that is, you can’t set the same name for different Spiders.
+   - name: 用于识别爬虫，它在项目中必须是唯一的，也就是说，不能为不同的爬虫设置相同的名称。 
 
-   - start_urls: which the Spider will begin to crawl from. Subsequent requests will be generated successively from these initial requests.
+   - start_urls: 起始地址数组，爬虫将从该地址组开始爬行，后续请求将从这些初始请求按照用户定义的方式连续生成。
 
-   - parse(): a method that will be called to handle the response downloaded for each of the requests made. The response parameter is an instance of TextResponse that holds the page content and has further helpful methods to handle it.
+   - parse(): 缺省解析函数，当每个请求完成时，该函数将被调用用于处理返回的数据，该方法通常用于将获取的数据提取为json对象，并查找要跟踪的新URL，并从中创建新请求（Request）。其response参数是 `Response` 类的一个实例，它实现了许多有用的方法来处理返回的数据。 
 
-The parse() method usually parses the response, extracting the scraped data as json object and also finding new URLs to follow and creating new requests (Request) from them.
+### 如何运行爬虫
 
-### How to run our spider
 To put our spider to work, go to the project’s top level directory and run:
 
 ```

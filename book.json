@@ -11,14 +11,13 @@
         "-sharing",
         "-fontsettings",
         "back-to-top-button",
-        "copy-code-button",
         "cuav-chapters",
         "heading-anchors",
         "search-pro",
-        "theme-fexa"
+        "theme-hqbook"
     ],
     "variables": {
-        "themeFexa": {
+        "themeHqbook": {
             "nav": [
                 {
                     "url": "http://...",
@@ -29,14 +28,14 @@
         }
     },
     "pluginsConfig": {
-        "insert-logo": {
-            "url": "/en/logo/tai-spider.jpg",
-            "style": "background: none; max-height: 30px; min-height: 30px"
-        },
-        "theme-fexa": {
+        "theme-hqbook": {
             "search-placeholder": "输入关键字搜索",
-            "logo": "./logo.jpg",
-            "favicon": "./favicon.ico"
+            "logo": "/logo.jpg",
+            "favicon": "/favicon.ico",
+            "hide-elements": [
+                ".summary .gitbook-link",
+                ".navigation"
+            ]
         }
     }
 }
