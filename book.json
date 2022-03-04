@@ -1,5 +1,5 @@
 {
-    "title": "Tai Spider Reference",
+    "title": "TaiSpider In Action",
     "author": "Edward Zhu (zhuhy163@163.com)",
     "description": "TaiSpider In Action",
     "language": "en",
@@ -20,9 +20,9 @@
         "themeHqbook": {
             "nav": [
                 {
-                    "url": "http://...",
+                    "url": "https://github.com/wx-rdc/tai-spider",
                     "target": "_blank",
-                    "name": "简易教程"
+                    "name": "Github"
                 }
             ]
         }
